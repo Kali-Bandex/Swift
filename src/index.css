@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+*{
+    font-family: 'poppins';
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}

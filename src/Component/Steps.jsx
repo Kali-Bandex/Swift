@@ -24,7 +24,7 @@ const Steps = () => {
         variants={container}
         initial="hidden"
         whileInView="visible"
-        viewport={{ margin: "-300px", once: true }}>
+        viewport={{ amount: 0.3, once: true }}>
         <motion.h2
           className="text-white text-3xl tracking-tighter font-normal lg:text-center mb-8"
           variants={{
@@ -51,7 +51,7 @@ const Steps = () => {
           finances. Manage all expenses with Spend.In all in one place.
         </motion.p>
         <div
-          className="grid grid-cols-1 lg:grid-cols-4 gap-16 lg:gap-28 px-14 lg:px-28 mt-14"
+          className="grid grid-cols-1 lg:grid-cols-4 gap-16 px-4 sm:px-8 md:px-14 lg:px-28 mt-14"
           variants={container}>
           {ourSteps.map((step, idx) => (
             <motion.div
@@ -71,14 +71,14 @@ const Steps = () => {
                   },
                 },
               }}>
-              <div className="bg-[#3563E9] text-white w-10 aspect-square rounded-full flex items-center justify-center absolute -top-4 -left-4 border-4 border-[#0D121F]">
+              <div className="bg-[#3563E9] text-white w-12 lg:w-10 aspect-square rounded-full flex items-center justify-center absolute -top-4 -left-4 border-4 border-[#0D121F]">
                 {idx + 1}
               </div>
-              <div className="bg-[#fff] aspect-square rounded-4xl flex items-center justify-center">
+              <div className="bg-[#fff] aspect-square rounded-4xl flex items-center justify-center p-6 lg:p-0">
                 <img
                   src={step.image}
                   alt=""
-                  className="w-full h-full aspect-square"
+                  className="w-full h-auto object-contain"
                 />
               </div>
               <p className="text-white text-center text-[17px] tracking-tighter mt-6">
